@@ -17,17 +17,22 @@ console.log(amgad.age);
 amgad.greating()
 
 
+//Check if an item exist
 if ("sex" in amgad) console.log("Exist");
-for (let key in amgad) console.log(key, amgad[key]);
-
-// for (let entry in Object.entries(amgad)) console.log(entry, amgad);
-// for (let key in Object.keys(amgad)) console.log(key);
 
 
+//Iterating over an object
+for (let key in amgad) console.log(key, amgad[key]);//Over the properties
+for (let entry of Object.entries(amgad)) 
+    console.log(`key: ${entry[0]}, value: ${entry[1]}`);//Enumerating Properties, return a list of key, value==> [key, value]
+for (let key of Object.keys(amgad)) console.log(key);//Get properties
+
+
+//Copy an object
 let anotherAmgad = Object.assign({}, amgad);//copy the object into the given object
 anotherAmgad.name.last = "Empty";
 
-let anotherAmgad2 = {...amgad};
+let anotherAmgad2 = {...amgad};//copy using the spread operator
 
 console.log(amgad, anotherAmgad, anotherAmgad2);
 console.log(amgad.name.last);//Original ref changed 
