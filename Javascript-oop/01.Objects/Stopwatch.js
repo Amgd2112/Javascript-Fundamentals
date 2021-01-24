@@ -1,4 +1,4 @@
-Stopwatch = function(){
+let Stopwatch = function(){
     let startTime, endTime, running=false, duration = 0;
 
     this.start = function(){
