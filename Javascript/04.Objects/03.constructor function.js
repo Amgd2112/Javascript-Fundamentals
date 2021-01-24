@@ -25,7 +25,9 @@ if ("sex" in amgad) console.log("Exist");
 for (let key in amgad) console.log(key, amgad[key]);//Over the properties
 for (let entry of Object.entries(amgad)) 
     console.log(`key: ${entry[0]}, value: ${entry[1]}`);//Enumerating Properties, return a list of key, value==> [key, value]
-for (let key of Object.keys(amgad)) console.log(key);//Get properties
+
+console.log(Object.keys(amgad));//Get properties
+console.log(Object.values(amgad))//Get property value
 
 
 //Copy an object
