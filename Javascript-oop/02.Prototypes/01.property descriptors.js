@@ -16,7 +16,7 @@ let descriptor = Object.getOwnPropertyDescriptor(objectBase, "toString");
 console.log(descriptor);
 
 // writable: true ==> It can be modified
-// enumerable: false ==> The object key can be accessed
+// enumerable: false ==> So that it does not appear in 'for in' loop
 // configurable: true ==> It can be deteted
 
 c1.radius = 10;
